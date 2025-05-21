@@ -1,4 +1,39 @@
 var initPhotoSwipeFromDOM = function (gallerySelector) {
+  // Add image counters and dots to all galleries
+  var initGalleryIndicators = function() {
+    document.querySelectorAll('.project-gallery').forEach(function(gallery) {
+      // Remove any existing indicators first
+      gallery.querySelectorAll('.gallery__image-counter, .gallery__dots').forEach(function(el) {
+        el.remove();
+      });
+
+      var mainImage = gallery.querySelector('.gallery__link');
+      var hiddenImages = gallery.querySelectorAll('.hidden-gallery-items a');
+      var totalImages = hiddenImages.length + 1;
+
+      // Only add indicators if there are multiple images
+      if (totalImages > 1) {
+        // Add counter
+        var counter = document.createElement('div');
+        counter.className = 'gallery__image-counter';
+        counter.textContent = '1/' + totalImages;
+        gallery.appendChild(counter);
+
+        // Add dots
+        var dotsContainer = document.createElement('div');
+        dotsContainer.className = 'gallery__dots';
+        
+        for(var i = 0; i < totalImages; i++) {
+          var dot = document.createElement('div');
+          dot.className = 'gallery__dot' + (i === 0 ? ' active' : '');
+          dotsContainer.appendChild(dot);
+        }
+        
+        gallery.appendChild(dotsContainer);
+      }
+    });
+  };
+
   var parseThumbnailElements = function (el) {
     var thumbElements = el.querySelectorAll('.project-gallery'),
       numNodes = thumbElements.length,
@@ -173,20 +208,59 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
     }
 
     gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+    
+    // Update counter and dots when image changes
+    gallery.listen('afterChange', function() {
+      var currentIndex = gallery.getCurrentIndex();
+      var currentProject = items[currentIndex].projectId;
+      var projectItems = items.filter(function(item) {
+        return item.projectId === currentProject;
+      });
+      var projectIndex = projectItems.findIndex(function(item) {
+        return item === items[currentIndex];
+      });
+      
+      // Find the current project's gallery element
+      var galleryEl = items[currentIndex].el;
+      
+      // Update counter
+      var counter = galleryEl.querySelector('.gallery__image-counter');
+      if (counter) {
+        counter.textContent = (projectIndex + 1) + '/' + projectItems.length;
+      }
+      
+      // Update dots
+      var dots = galleryEl.querySelectorAll('.gallery__dot');
+      dots.forEach(function(dot, i) {
+        if (i === projectIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    });
+
     gallery.init();
   };
 
-  var galleryElements = document.querySelectorAll(gallerySelector);
+  // Initialize indicators for all galleries
+  initGalleryIndicators();
 
+  var galleryElements = document.querySelectorAll(gallerySelector);
+  
   for (var i = 0, l = galleryElements.length; i < l; i++) {
     galleryElements[i].setAttribute('data-pswp-uid', i + 1);
     galleryElements[i].onclick = onThumbnailsClick;
   }
 
+  // Parse URL and open gallery if it contains #&pid=3&gid=1
   var hashData = photoswipeParseHash();
   if (hashData.pid && hashData.gid) {
     openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
   }
 };
 
-initPhotoSwipeFromDOM('.my-gallery');
+// Initialize galleries when the DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+  initPhotoSwipeFromDOM('.my-gallery');
+});
