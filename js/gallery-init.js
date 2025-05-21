@@ -20,6 +20,8 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
       var mainLink = figureEl.querySelector('.gallery__link');
       var hiddenLinks = figureEl.querySelectorAll('.hidden-gallery-items a');
       var allLinks = [mainLink, ...Array.from(hiddenLinks)];
+      var figureParent = figureEl.closest('figure');
+      var captionEl = figureParent.querySelector('figcaption');
 
       allLinks.forEach(function(linkEl) {
         if (!linkEl) return;
@@ -34,6 +36,11 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
 
         if (linkEl.children.length > 0) {
           item.msrc = linkEl.children[0].getAttribute('src');
+        }
+
+        // Add caption/description
+        if (captionEl) {
+          item.title = captionEl.innerHTML;
         }
 
         item.el = figureEl;
