@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <title>Solale Hamzeh - Personal Portfolio &amp; </title>
+
+  <meta
+    content="mix_design, resume, portfolio, personal page, cv, template, one page, responsive, html5, css3, creative, clean"
+    name="keywords" />
+  <meta content="mix_design" name="Solale Hamzeh" />
+
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+
+  <meta content="1200" property="og:image:height" />
+  <meta content="1200" property="og:image:width" />
+  <meta content=">Solale Hamzeh - Personal Portfolio &amp;" property="og:title" />
+
+  <link href="css/loaders/loader.css" rel="stylesheet" />
+  <link href="css/plugins.css" rel="stylesheet" type="text/css" />
+  <link href="css/main.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .project-gallery {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hidden-gallery-items {
+      display: none;
+    }
+
+    .pswp__button--arrow--left,
+    .pswp__button--arrow--right {
+      background-color: rgba(0, 0, 0, 0.3) !important;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .pswp__button--arrow--left {
+      left: 20px;
+    }
+
+    .pswp__button--arrow--right {
+      right: 20px;
+    }
+  </style>
+
+  <meta content="#dcdce7" media="(prefers-color-scheme: light)" name="theme-color" />
+  <meta content="#111111" media="(prefers-color-scheme: dark)" name="theme-color" />
+  <meta content="#111111" name="msapplication-navbutton-color" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+
+</head>
+
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__content" id="loaderContent">
+      <div class="loader__shadow"></div>
+      <div class="loader__box"></div>
+    </div>
+  </div>
+
+  <header class="header d-flex justify-content-between" id="header">
+
+    <div class="header__navigation">
+      <nav class="menu" id="menu">
+        <ul class="menu__list d-flex justify-content-start">
+          <li class="menu__item">
+            <a class="menu__link btn" href="#home">
+              <span class="menu__caption">Home</span>
+              <i class="ph-bold ph-house-simple"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="#portfolio">
+              <span class="menu__caption">Portfolio</span>
+              <i class="ph-bold ph-squares-four"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="#about">
+              <span class="menu__caption">About Me</span>
+              <i class="ph-bold ph-user"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="#resume">
+              <span class="menu__caption">Resume</span>
+              <i class="ph-bold ph-article"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="#contact">
+              <span class="menu__caption">Contact</span>
+              <i class="ph-bold ph-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="header__controls d-flex justify-content-end">
+      <button aria-checked="true" aria-label="light/dark mode" class="color-switcher header__switcher btn"
+        id="color-switcher" role="switch" type="button"></button>
+      <a class="header__trigger btn" href="mailto:adelghpour@gmail.com" id="notify-trigger">
+        <span class="trigger__caption">Let's Talk</span>
+        <i class="ph-bold ph-chat-dots"></i>
+      </a>
+    </div>
+
+  </header>
+
+  <div class="avatar" id="avatar">
+    <div class="avatar__container d-flex flex-column justify-content-lg-between">
+
+      <div class="avatar__block">
+        <div class="avatar__logo d-flex align-items-center">
+          <div class="logo__caption">
+            <p>Solale Hamzeh</p>
+          </div>
+        </div>
+        <div class="avatar__image">
+          <img alt="Solale Hamzeh-Personal Portfolio &amp; Resume HTML Template Avatar" src="img\MyPIC.jpg" />
+        </div>
+      </div>
+
+      <div class="avatar__block">
+        <h6 class="top2">
+          <small class="top">Specialization:</small>
+          Unity Programmer<br />Game designer
+        </h6>
+      </div>
+
+      <div class="avatar__block">
+        <div class="avatar__btnholder">
+          <a class="btn btn-default btn-fullwidth btn-hover btn-hover-accent" href="#contact" target="_blank">
+            <span class="btn-caption">Let's Work Together!</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content" id="content">
+    <div class="content__wrapper">
+
+      <section class="main intro" id="home">
+
+        <div class="headline d-flex align-items-start flex-column" data-speed="1" id="headline">
+
+          <h1 class="headline__title animate-headline">I'm Solale Hamzeh
+            Game Developer and Programmer.</h1>
+          <div class="headline__btnholder d-flex flex-column flex-sm-row">
+            <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent-mobile animate-headline"
+              href="#portfolio">
+              <span class="btn-caption">My Works</span>
+              <i class="ph-bold ph-squares-four"></i>
+            </a>
+            <a class="btn mobile-vertical btn-default btn-hover btn-hover-outline-mobile animate-headline"
+              href="Files/Resume_SolaleHamzeh.pdf">
+              <span class="btn-caption">Download CV</span>
+              <i class="ph-bold ph-download-simple"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="rotating-btn">
+          <a class="rotating-btn__link slide-down" href="#portfolio">
+
+            <svg class="animate-rotation" data-value="360" style="enable-background:new 0 0 120 120;" version="1.1"
+              viewbox="0 0 120 120" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+              <defs>
+                <path d="M110,59.5c0,27.6-22.4,50-50,50s-50-22.4-50-50s22.4-50,50-50S110,31.9,110,59.5z" id="textPath">
+                </path>
+              </defs>
+              <g>
+                <use fill="none" xlink:href="#textPath"></use>
+                <text>
+
+                  <textpath xlink:href="#textPath">Scroll for More * Scroll for More * </textpath>
+                </text>
+              </g>
+            </svg>
+
+            <i class="ph-bold ph-arrow-down"></i>
+          </a>
+        </div>
+
+      </section>
+
+      <section class="inner inner-first portfolio" id="portfolio">
+
+        <div class="content__block section-grid-title">
+          <p class="h2__subtitle animate-in-up">
+            <svg fill="currentColor" height="13px" viewbox="0 0 13 13" width="13px" x="0px"
+              xmlns="http://www.w3.org/2000/svg" y="0px">
+              <path d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z" fill="currentColor"></path>
+            </svg>
+            <span>Portfolio</span>
+          </p>
+          <h2 class="h2__title animate-in-up">Check out my featured projects</h2>
+        </div>
+
+        <div class="content__block grid-block">
+          <div class="container-fluid px-0 inner__gallery">
+            <div class="row gx-0 my-gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
+
+              <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia"
+                itemscope itemtype="http://schema.org/ImageObject">
+                <div class="project-gallery" data-project-id="1">
+                  <a class="gallery__link" data-image="img/Oldman.jpg" data-size="1920x1080" href="img/Oldman.jpg"
+                    itemprop="contentUrl">
+                    <img alt="Memmory Bubble - A 2D Point-and-Click Game" class="gallery__image" itemprop="thumbnail"
+                      src="img/Oldman.jpg" />
+                  </a>
+                  <!-- Hidden images for this project -->
+                  <div class="hidden-gallery-items" style="display: none;">
+                    <a data-image="img/Oldman2.jpg" data-size="1920x1080" href="img/Oldman.jpg"></a>
+                    <a data-image="img/Oldman3.jpg" data-size="1920x1080" href="img/Oldman.jpg"></a>
+                  </div>
+                </div>
+
+                <figcaption class="gallery__descr" itemprop="caption description">
+                  <h5>Memory Bubble</h5>
+                  <div class="card__tags d-flex flex-wrap">
+                    <span class="rounded-tag opposite">Game Programming</span>
+                    <span class="rounded-tag opposite">Game Design</span>
+                    <span class="rounded-tag opposite">Mentorship</span>
+                  </div>
+                  <p class="small">
+                    A heartfelt 2D point-and-click adventure created during a game jam, where I served as both a
+                    developer and mentor to three new teammates.
+                    Every morning, an elderly man with Alzheimer's wakes to a blank mind, and players must uncover
+                    hidden objects and solve engaging puzzles
+                    to reconstruct his most treasured memories—before they slip away again.
+                    <a class="text-link" href="Files/OldManBubbely.zip" target="_blank">
+                      Download the Game
+                    </a>
+                  </p>
+                </figcaption>
+              </figure>
+
+              </figure>
+
+              <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia"
+                itemscope itemtype="http://schema.org/ImageObject">
+                <a class="gallery__link" data-image="img/Dessert.png" data-size="1420x827" href="img/Dessert.png"
+                  itemprop="contentUrl">
+                  <img alt="Procedural City and Oasis Asset - Unity" class="gallery__image" itemprop="thumbnail"
+                    src="img/Dessert.png" />
+                </a>
+
+                <figcaption class="gallery__descr opposite" itemprop="caption description">
+                  <h5 class="opposite">Procedural City & Oasis Asset</h5>
+                  <div class="card__tags d-flex flex-wrap">
+                    <span class="rounded-tag">Procedural Generation</span>
+                    <span class="rounded-tag">Post-Processing</span>
+                  </div>
+                  <p class="small">
+                    Collaborated with a 3D artist to develop a modular city and oasis asset for the Unity Asset Store.
+                    Designed and implemented procedural generation scripts to create dynamic and diverse environments,
+                    making complex 3D art more accessible through code. Enhanced visual fidelity using post-processing
+                    techniques in Unity. Currently in the publishing process due to Unity Asset Store's slow submission
+                    review.
+                    <br><strong>Tools Used:</strong> Unity, C#, Blender (3D modeling by collaborator).
+                    <a class="text-link" href="#" target="_blank">Coming Soon on Unity Asset Store</a>
+                  </p>
+                </figcaption>
+              </figure>
+
+
+              <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia"
+                itemscope itemtype="http://schema.org/ImageObject">
+                <a class="gallery__link" data-image="img/ninja.png" data-size="1280x720" href="img/ninja.png"
+                  itemprop="contentUrl">
+                  <img alt="Secret Project - Mysterious Work" class="gallery__image" itemprop="thumbnail"
+                    src="img/ninja.png" />
+                </a>
+                <figcaption class="gallery__descr opposite" itemprop="caption description">
+                  <h5 class="opposite">Secret Project 🤫 </h5>
+                  <div class="card__tags d-flex flex-wrap">
+                    <span class="rounded-tag">Illustrations</span>
+                    <span class="rounded-tag">Game Design</span>
+                  </div>
+                  <p class="small">
+                    I could tell you about this project... but then it wouldn't be a secret anymore!
+                    Stay tuned for something exciting. 👀
+                  </p>
+                </figcaption>
+              </figure>
+
+              <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia"
+                itemscope itemtype="http://schema.org/ImageObject">
+                <a class="gallery__link" data-image="img/TryHarder.gif" data-size="1920x1080" href="img/TryHarder.gif"
+                  itemprop="contentUrl">
+                  <img alt="Try Harder - Ultimate Challenge Game" class="gallery__image" itemprop="thumbnail"
+                    src="img/TryHarder.gif" />
+                </a>
+                <figcaption class="gallery__descr" itemprop="caption description">
+                  <h5>Try Harder</h5>
+                  <div class="card__tags d-flex flex-wrap">
+                    <span class="rounded-tag opposite">Game Design</span>
+                    <span class="rounded-tag opposite">Programming</span>
+                    <span class="rounded-tag opposite">Sound & Beatboxing</span>
+                    <span class="rounded-tag opposite">Puzzle & Level Design</span>
+                  </div>
+                  <p class="small">
+                    A personal passion project where I did everything—from idea to coding, level design, character
+                    creation, and even beatboxing for the sound effects!
+                    Think you have what it takes to conquer one of the toughest games out there? Every level is designed
+                    to challenge even the most dedicated players.
+                    <br><strong>Upcoming Update:</strong> More levels, character skins, a level editor, in-game shop,
+                    and new playable characters. Get ready for the ultimate challenge!
+                    <br><a class="text-link" href="https://pro-code-designer.itch.io/try-harder-soul-swap"
+                      target="_blank">
+                      Download on Itch.io
+                    </a>
+                  </p>
+                </figcaption>
+              </figure>
+
+              <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia"
+                itemscope itemtype="http://schema.org/ImageObject">
+                <a class="gallery__link" data-image="img/Doors.gif" data-size="800x450" href="img/Doors.gif"
+                  itemprop="contentUrl">
+                  <img alt="Sci-Fi Door System - Customizable Access Logic" class="gallery__image" itemprop="thumbnail"
+                    src="img/Doors.gif" />
+                </a>
+                <figcaption class="gallery__descr" itemprop="caption description">
+                  <h5>Sci-Fi Door System</h5>
+                  <div class="card__tags d-flex flex-wrap">
+                    <span class="rounded-tag opposite">Logic Programming</span>
+                    <span class="rounded-tag opposite">Animation & Asset Controller</span>
+                  </div>
+                  <p class="small">
+                    Developed for Enigma Studio and an asset publisher, this sci-fi door system is fully customizable
+                    for Unity and Unreal Engine.
+                    Implemented advanced logic, including keycard access, passcode entry, and animation control, to
+                    ensure smooth integration with game environments.
+                  </p>
+                </figcaption>
+              </figure>
+
+              <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia"
+                itemscope itemtype="http://schema.org/ImageObject">
+                <a class="gallery__link" data-image="img/TowerJump.gif" data-size="1920x1080" href="img/TowerJump.gif"
+                  itemprop="contentUrl">
+                  <img alt="Tower Jump - Hyper Casual Game Template" class="gallery__image" itemprop="thumbnail"
+                    src="img/TowerJump.gif" />
+                </a>
+
+                <figcaption class="gallery__descr" itemprop="caption description">
+                  <h5>Tower Jump - Hyper Casual Game Template</h5>
+                  <div class="card__tags d-flex flex-wrap">
+                    <span class="rounded-tag opposite">Procedural Mesh Gen</span>
+                    <span class="rounded-tag opposite">Unity Asset</span>
+                  </div>
+                  <p class="small">
+                    A fully coded hyper-casual game template with procedurally generated 3D meshes—built without any 3D
+                    modeling software.
+                    Features dynamic obstacles, customizable parameters, and a simple menu system. The first version
+                    gained 500+ downloads,
+                    with an improved update coming soon.
+                    <br><a class="text-link"
+                      href="https://assetstore.unity.com/packages/templates/packs/tower-jump-295773" target="_blank">
+                      Download on Unity Asset Store
+                    </a>
+                  </p>
+                </figcaption>
+              </figure>
+
+
+              <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia"
+                itemscope itemtype="http://schema.org/ImageObject">
+                <a class="gallery__link" data-image="img/Water.gif" data-size="800x450" href="img/Water.gif"
+                  itemprop="contentUrl">
+                  <img alt="Water Simulation with Proximity Experiment" class="gallery__image" itemprop="thumbnail"
+                    src="img/Water.gif" />
+                </a>
+                <figcaption class="gallery__descr" itemprop="caption description">
+                  <h5>Water Simulation with Proximity Experiment</h5>
+                  <div class="card__tags d-flex flex-wrap">
+                    <span class="rounded-tag opposite">Water Simulation</span>
+                    <span class="rounded-tag opposite">Proximity Experiment</span>
+                  </div>
+                  <p class="small">
+                    A fun experiment in Unity, aiming to replicate Blender's Geometry Nodes for procedural water
+                    simulation.
+                    Implemented proximity-based interactions to dynamically influence water movement, creating a fluid
+                    and
+                    adaptive simulation.
+                  </p>
+                </figcaption>
+              </figure>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="inner about" id="about">
+
+        <div class="content__block section-grid-title">
+          <p class="h2__subtitle animate-in-up">
+            <svg fill="currentColor" height="13px" viewbox="0 0 13 13" width="13px" x="0px"
+              xmlns="http://www.w3.org/2000/svg" y="0px">
+              <path d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z" fill="currentColor"></path>
+            </svg>
+            <span>About Me</span>
+          </p>
+          <h2 class="h2__title animate-in-up">Turning complex problems into simple design</h2>
+        </div>
+
+        <div class="content__block grid-block">
+          <div class="achievements d-flex flex-column flex-md-row align-items-md-stretch">
+
+            <div class="achievements__item d-flex flex-column grid-item animate-card-3">
+              <div class="achievements__card">
+                <p class="achievements__number">4+</p>
+                <p class="achievements__descr">Uniry Programming experience</p>
+              </div>
+            </div>
+
+            <div class="achievements__item d-flex flex-column grid-item animate-card-3">
+              <div class="achievements__card">
+                <p class="achievements__number">10+</p>
+                <p class="achievements__descr">Programming experience</p>
+              </div>
+            </div>
+
+            <div class="achievements__item d-flex flex-column grid-item animate-card-3">
+              <div class="achievements__card">
+                <p class="achievements__number">15+</p>
+                <p class="achievements__descr">Projects done</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__block grid-block block-large">
+          <div class="container-fluid p-0">
+            <div class="row g-0 justify-content-between">
+
+              <div class="col-12 col-xl-8 grid-item about-descr">
+                <p class="about-descr__text animate-in-up">
+                  I'm a game programmer specializing in game design, procedural content generation, puzzle and level
+                  design, and simulations. I've led a team to develop an AR game and have years of experience creating
+                  dynamic systems and interactive worlds. My focus is on crafting engaging mechanics that challenge and
+                  inspire players.
+                  <a class="text-link" href="mailto:adelghwork@gmail.com?subject=Message%20from%20your%20site">Let's
+                    build something innovative together.</a>
+                </p>
+                <div class="btn-group about-descr__btnholder animate-in-up">
+                  <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent"
+                    href="Files/Resume_SolaleHamzeh.pdf">
+                    <span class="btn-caption">Download CV</span>
+                    <i class="ph-bold ph-download-simple"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-12 col-xl-4 grid-item about-info">
+                <div class="about-info__item animate-in-up">
+                  <h6 class="top2">
+                    <small class="top">Name</small>Solale Hamzeh
+                  </h6>
+                </div>
+                <div class="about-info__item animate-in-up">
+                  <h6 class="top2">
+                    <small class="top2">Phone</small>
+                    <a class="text-link-bold" href="tel:+989905856559">+98 990 585 6559</a>
+                  </h6>
+                </div>
+                <div class="about-info__item animate-in-up">
+                  <h6 class="top2">
+                    <small class="top2">Email</small>
+                    <a class="text-link-bold ,top2" href="mailto:adelghwork@gmail.com">adelghwork@gmail.com</a>
+                  </h6>
+                </div>
+                <div class="about-info__item animate-in-up">
+                  <h6 class="top2">
+                    <small class="top">Location</small>
+                    Tehran, Iran
+                  </h6>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+
+      <section class="inner resume" id="resume">
+
+        <div class="content__block block-large">
+          <p class="h2__subtitle animate-in-up">
+            <svg fill="currentColor" height="13px" viewbox="0 0 13 13" width="13px" x="0px"
+              xmlns="http://www.w3.org/2000/svg" y="0px">
+              <path d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z" fill="currentColor"></path>
+            </svg>
+            <span>Resume</span>
+          </p>
+          <h2 class="h2__title animate-in-up">Education and practical experience</h2>
+
+        </div>
+
+        <div class="content__block block-large">
+
+          <div class="section-h3">
+            <h3 class="h3__title animate-in-up">Work experience</h3>
+          </div>
+
+          <div class="container-fluid p-0 resume-lines">
+            <div class="row g-0 resume-lines__item animate-in-up">
+              <div class="col-12 col-md-2">
+                <span class="resume-lines__date animate-in-up">2022 - Present</span>
+              </div>
+              <div class="col-12 col-md-10">
+                <h5 class="resume-lines__title animate-in-up">Game Developer &amp; Team Lead</h5>
+                <p class="resume-lines__source animate-in-up">
+                  <a class="text-link-bold" href="#">Dancing Div Studio</a>
+                </p>
+                <br />
+                <p class="small resume-lines__descr animate-in-up">#Published multiple game assets in asset stores.</p>
+                <p class="small resume-lines__descr animate-in-up">#Developed and designed a 2D-pixel art puzzle game.
+                </p>
+                <p class="small resume-lines__descr animate-in-up">#Led a team of 5 people in the development of a 3D AR
+                  location-based game.</p>
+              </div>
+            </div>
+            <div class="row g-0 resume-lines__item animate-in-up">
+              <div class="col-12 col-md-2">
+                <span class="resume-lines__date animate-in-up">2023 - 2024</span>
+              </div>
+              <div class="col-12 col-md-10">
+                <h5 class="resume-lines__title animate-in-up">AAA Game Asset Programmer (project base)</h5>
+                <p class="resume-lines__source animate-in-up">
+                  <a class="text-link-bold" href="#">Enigma Studio</a>
+                </p>
+                <br />
+                <p class="small resume-lines__descr animate-in-up">#Contributed to the creation and sale of 3 assets for
+                  game stores.</p>
+                <p class="small resume-lines__descr animate-in-up">#Crafted logic for game assets, including animation
+                  controllers, physics controls, and mesh generation with code.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0 resume-lines__item animate-in-up">
+            <div class="col-12 col-md-2">
+              <span class="resume-lines__date animate-in-up">2019 - 2023</span>
+            </div>
+            <div class="col-12 col-md-10">
+              <h5 class="resume-lines__title animate-in-up">Freelance Developer</h5>
+              <p class="resume-lines__source animate-in-up">Self-Employed</p>
+              <br />
+              <p class="small resume-lines__descr animate-in-up">#Built and deployed 5+ Telegram bots for automated
+                tasks and communication.</p>
+              <p class="small resume-lines__descr animate-in-up">#Developed 10+ projects using Python and Remix, built
+                blockchain apps, and debugged AI models.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="content__block block-large">
+
+          <div class="section-h3">
+            <h3 class="h3__title animate-in-up">My education</h3>
+          </div>
+
+          <div class="container-fluid p-0 resume-lines">
+
+
+            <div class="row g-0 resume-lines__item animate-in-up">
+              <div class="col-12 col-md-2">
+                <span class="resume-lines__date animate-in-up">2018 - 2023</span>
+              </div>
+              <div class="col-12 col-md-10">
+                <h5 class="resume-lines__title animate-in-up">Bachelor of science in Computer Engineering</h5>
+                <p class="resume-lines__source animate-in-up">Imam Khomeini International University</p>
+              </div>
+            </div>
+            <div class="row g-0 resume-lines__item animate-in-up">
+              <div class="col-12 col-md-2">
+                <span class="resume-lines__date animate-in-up">2012 - 2018</span>
+              </div>
+              <div class="col-12 col-md-10">
+                <h5 class="resume-lines__title animate-in-up">Associate in Mathematics</h5>
+                <p class="resume-lines__source animate-in-up">
+                </p>
+                <a class="text-link-bold"
+                  href="https://en.wikipedia.org/wiki/National_Organization_for_Development_of_Exceptional_Talents">
+                  Sampad
+                </a>
+                </p>
+                <br />
+                <p class="small resume-lines__descr animate-in-up">#National Organization for Development of Exceptional
+                  Talents.</p>
+                <p class="small resume-lines__descr animate-in-up">#Specialized in mathematics and participated in
+                  Computer Olympiads.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="content__block">
+          <div class="section-h3 section-h3-grid">
+            <h3 class="h3__title animate-in-up">My favourite tools</h3>
+          </div>
+        </div>
+
+        <div class="content__block grid-block block-large">
+
+          <div class="tools-cards d-flex justify-content-start flex-wrap">
+
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img alt="Tools Icon" class="tools-cards__icon animate-in-up unity" src="img/icons/icon-unity3d.svg" />
+                <h6 class="tools-cards__caption animate-in-up">Unity3D</h6>
+              </div>
+            </div>
+
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img alt="Tools Icon" class="tools-cards__icon animate-in-up" src="img/icons/Icon-visual-studio.svg" />
+                <h6 class="tools-cards__caption animate-in-up">Visual studio</h6>
+              </div>
+            </div>
+
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img alt="Tools Icon" class="tools-cards__icon animate-in-up" src="img/icons/icon_Aseprite.svg" />
+                <h6 class="tools-cards__caption animate-in-up">Aseprite</h6>
+              </div>
+            </div>
+
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img alt="Tools Icon" class="tools-cards__icon animate-in-up" src="img/icons/icon-git.svg" />
+                <h6 class="tools-cards__caption animate-in-up">Git</h6>
+              </div>
+            </div>
+
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img alt="Tools Icon" class="tools-cards__icon animate-in-up" src="img/icons/icon-photoshop.svg" />
+                <h6 class="tools-cards__caption animate-in-up">Photoshop</h6>
+              </div>
+            </div>
+
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img alt="Tools Icon" class="tools-cards__icon animate-in-up unreal"
+                  src="img/icons/icon-unreal-engine.svg" />
+                <h6 class="tools-cards__caption animate-in-up">Unreal Engine</h6>
+              </div>
+            </div>
+
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img alt="Tools Icon" class="tools-cards__icon animate-in-up" src="img/icons/Icon-vscode.svg" />
+                <h6 class="tools-cards__caption animate-in-up">Vscode</h6>
+              </div>
+            </div>
+
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img alt="Tools Icon" class="tools-cards__icon animate-in-up" src="img/icons/icon-blender.svg" />
+                <h6 class="tools-cards__caption animate-in-up">Blender</h6>
+              </div>
+            </div>
+
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img alt="Tools Icon" class="tools-cards__icon animate-in-up" src="img/icons/Icon-mongodb.svg" />
+                <h6 class="tools-cards__caption animate-in-up">MongoDB</h6>
+              </div>
+            </div>
+
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img alt="Tools Icon" class="tools-cards__icon animate-in-up" src="img/icons/icon-illustrator.svg" />
+                <h6 class="tools-cards__caption animate-in-up">Illustrator</h6>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="content__block">
+          <div class="section-h3 section-h3-grid">
+            <h3 class="h3__title animate-in-up">My favourite Languages</h3>
+          </div>
+        </div>
+
+        <div class="content__block grid-block block-large">
+
+          <div class="tools-cards d-flex justify-content-start flex-wrap">
+
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img alt="Tools Icon" class="tools-cards__icon animate-in-up" src="img/icons/icon-c3.svg" />
+                <h6 class="tools-cards__caption animate-in-up">C#</h6>
+              </div>
+            </div>
+
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img alt="Tools Icon" class="tools-cards__icon animate-in-up" src="img/icons/icon-c2.svg" />
+                <h6 class="tools-cards__caption animate-in-up">C++</h6>
+              </div>
+            </div>
+
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img alt="Tools Icon" class="tools-cards__icon animate-in-up" src="img/icons/icon-c1.svg" />
+                <h6 class="tools-cards__caption animate-in-up">C</h6>
+              </div>
+            </div>
+
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img alt="Tools Icon" class="tools-cards__icon animate-in-up" src="img/icons/icon-python.svg" />
+                <h6 class="tools-cards__caption animate-in-up">Python</h6>
+              </div>
+            </div>
+
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img alt="Tools Icon" class="tools-cards__icon animate-in-up" src="img/icons/icon-solidity.svg" />
+                <h6 class="tools-cards__caption animate-in-up">Solidity</h6>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+      </section>
+
+      <section class="inner contact" id="contact">
+
+        <section class="content__block section-title">
+          <p class="h2__subtitle animate-in-up">
+            <svg fill="currentColor" height="13px" viewbox="0 0 13 13" width="13px" x="0px"
+              xmlns="http://www.w3.org/2000/svg" y="0px">
+              <path d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z" fill="currentColor"></path>
+            </svg>
+            <span>Contact</span>
+          </p>
+          <h2 class="h2__title animate-in-up">Let's make something awesome together!</h2>
+        </section>
+
+        <div class="content__block">
+          <div class="container-fluid p-0 contact-lines animate-in-up">
+            <div class="row g-0 contact-lines__item">
+
+              <div class="col-12 col-md-4 contact-lines__data">
+                <p class="contact-lines__title animate-in-up">Linkedin</p>
+                <p class="contact-lines__text animate-in-up">
+                  <a class="text-link-bold" href="https://www.linkedin.com/in/adelghasempour/" target="_blank">Solale
+                    Hamzeh</a>
+                </p>
+              </div>
+
+              <div class="col-12 col-md-4 contact-lines__data">
+                <p class="contact-lines__title animate-in-up">Phone</p>
+                <p class="contact-lines__text animate-in-up">
+                  <a class="text-link-bold" href="tel:+989905856559">+98 990 585 6559</a>
+                </p>
+              </div>
+
+              <div class="col-12 col-md-4 contact-lines__data">
+                <p class="contact-lines__title animate-in-up">Email</p>
+                <p class="contact-lines__text animate-in-up">
+                  <a class="text-link-bold" href="mailto:adelghwork@gmail.com">adelghwork@gmail.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <div class="pswp__ui pswp__ui--hidden">
+        <div class="pswp__top-bar">
+
+          <div class="pswp__counter"></div>
+          <button class="pswp__button pswp__button--close link-s" title="Close (Esc)"></button>
+          <button class="pswp__button pswp__button--share link-s" title="Share"></button>
+          <button class="pswp__button pswp__button--fs link-s" title="Toggle fullscreen"></button>
+          <button class="pswp__button pswp__button--zoom link-s" title="Zoom in/out"></button>
+
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+        <button class="pswp__button pswp__button--arrow--left link-s" title="Previous (arrow left)"></button>
+        <button class="pswp__button pswp__button--arrow--right link-s" title="Next (arrow right)"></button>
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/libs.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const content = document.querySelector('body');
+    const imgLoad = imagesLoaded(content);
+    const svgBackground = document.querySelector("svg-background");
+
+    imgLoad.on('done', instance => {
+
+      document.getElementById("loaderContent").classList.add("fade-out");
+      setTimeout(() => {
+        document.getElementById("loader").classList.add("loaded");
+      }, 300);
+
+      gsap.set(".animate-headline", { y: 50, opacity: 0 });
+      ScrollTrigger.batch(".animate-headline", {
+        interval: 0.1,
+        batchMax: 4,
+        duration: 6,
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1,
+          y: 0,
+          ease: 'sine',
+          stagger: { each: 0.15, grid: [1, 4] },
+          overwrite: true
+        }),
+        onLeave: batch => gsap.set(batch, { opacity: 1, y: 0, overwrite: true }),
+        onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
+        onLeaveBack: batch => gsap.set(batch, { opacity: 0, y: 50, overwrite: true })
+      });
+
+    });
+  </script>
+  <script src="js/app.js"></script>
+  <script src="js/gallery-init.js"></script>
+
+</body>
+
+</html>
