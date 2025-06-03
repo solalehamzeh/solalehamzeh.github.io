@@ -2752,7 +2752,7 @@ form textarea:required:valid {
 
 @media only screen and (min-width: 1400px) {
   .headline__title {
-    max-width: 760px;
+    max-width: 780px;
   }
 }
 
@@ -4180,7 +4180,10 @@ form textarea:required:valid {
 
 .pswp__button--arrow--left::before,
 .pswp__button--arrow--right::before {
-  top: 28px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   width: 44px;
   height: 44px;
   line-height: 44px;
@@ -4192,12 +4195,10 @@ form textarea:required:valid {
 }
 
 .pswp__button--arrow--left:before {
-  left: 1.5rem;
   background-position: -132px -44px;
 }
 
 .pswp__button--arrow--right:before {
-  right: 1.5rem;
   background-position: -88px -44px;
 }
 
@@ -5036,4 +5037,8 @@ form textarea:required:valid {
   .pswp__caption__center {
     padding: 30px;
   }
+}
+
+.mr-2 {
+  margin-right: 2rem;
 }

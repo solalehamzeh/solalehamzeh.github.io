@@ -1,9 +1,9 @@
 var initPhotoSwipeFromDOM = function (gallerySelector) {
-  // Add image counters and dots to all galleries
+  // Add image counters to all galleries
   var initGalleryIndicators = function() {
     document.querySelectorAll('.project-gallery').forEach(function(gallery) {
-      // Remove any existing indicators first
-      gallery.querySelectorAll('.gallery__image-counter, .gallery__dots').forEach(function(el) {
+      // Remove any existing indicators
+      gallery.querySelectorAll('.gallery__image-counter').forEach(function(el) {
         el.remove();
       });
 
@@ -11,45 +11,31 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
       var hiddenImages = gallery.querySelectorAll('.hidden-gallery-items a');
       var totalImages = hiddenImages.length + 1;
 
-      // Only add indicators if there are multiple images
+      // Only add counter if there are multiple images
       if (totalImages > 1) {
         // Add counter
         var counter = document.createElement('div');
         counter.className = 'gallery__image-counter';
         counter.textContent = '1/' + totalImages;
         gallery.appendChild(counter);
-
-        // Add dots
-        var dotsContainer = document.createElement('div');
-        dotsContainer.className = 'gallery__dots';
-        
-        for(var i = 0; i < totalImages; i++) {
-          var dot = document.createElement('div');
-          dot.className = 'gallery__dot' + (i === 0 ? ' active' : '');
-          dotsContainer.appendChild(dot);
-        }
-        
-        gallery.appendChild(dotsContainer);
       }
     });
   };
 
   var parseThumbnailElements = function (el) {
     var thumbElements = el.querySelectorAll('.project-gallery'),
-      numNodes = thumbElements.length,
-      items = [],
-      figureEl,
-      linkEl,
-      size,
-      item,
-      projectItems;
+      items = [];
 
-    for (var i = 0; i < numNodes; i++) {
-      figureEl = thumbElements[i];
-
+    thumbElements.forEach(function(figureEl, galleryIndex) {
       if (figureEl.nodeType !== 1) {
-        continue;
+        return;
       }
+
+      // Set unique project ID if not already set
+      if (!figureEl.getAttribute('data-project-id')) {
+        figureEl.setAttribute('data-project-id', 'project-' + galleryIndex);
+      }
+      var projectId = figureEl.getAttribute('data-project-id');
 
       // Get all gallery items for this project (visible + hidden)
       var mainLink = figureEl.querySelector('.gallery__link');
@@ -58,22 +44,22 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
       var figureParent = figureEl.closest('figure');
       var captionEl = figureParent.querySelector('figcaption');
 
-      allLinks.forEach(function(linkEl) {
+      allLinks.forEach(function(linkEl, imageIndex) {
         if (!linkEl) return;
 
-        size = linkEl.getAttribute('data-size').split('x');
-        item = {
+        var size = linkEl.getAttribute('data-size').split('x');
+        var item = {
           src: linkEl.getAttribute('href'),
           w: parseInt(size[0], 10),
           h: parseInt(size[1], 10),
-          projectId: figureEl.getAttribute('data-project-id')
+          projectId: projectId,
+          imageIndex: imageIndex
         };
 
         if (linkEl.children.length > 0) {
           item.msrc = linkEl.children[0].getAttribute('src');
         }
 
-        // Add caption/description
         if (captionEl) {
           item.title = captionEl.innerHTML;
         }
@@ -81,7 +67,7 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
         item.el = figureEl;
         items.push(item);
       });
-    }
+    });
 
     return items;
   };
@@ -104,21 +90,23 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
       return;
     }
 
-    var clickedGallery = clickedListItem.closest(gallerySelector),
-      projectId = clickedListItem.getAttribute('data-project-id'),
-      index = 0;
-
-    // Find the index of the first image of this project
+    var clickedGallery = clickedListItem.closest(gallerySelector);
+    var projectId = clickedListItem.getAttribute('data-project-id');
     var items = parseThumbnailElements(clickedGallery);
-    for (var i = 0; i < items.length; i++) {
-      if (items[i].projectId === projectId) {
-        index = i;
-        break;
-      }
-    }
+    
+    // Find all items for this project
+    var projectItems = items.filter(function(item) {
+      return item.projectId === projectId;
+    });
+    
+    // Find the index within project items
+    var index = projectItems.findIndex(function(item) {
+      return item.el === clickedListItem;
+    });
 
     if (index >= 0) {
-      openPhotoSwipe(index, clickedGallery);
+      // Open PhotoSwipe with filtered items
+      openPhotoSwipe(index, clickedGallery, false, false, projectItems);
     }
     return false;
   };
@@ -154,16 +142,26 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
     index,
     galleryElement,
     disableAnimation,
-    fromURL
+    fromURL,
+    projectItems
   ) {
     var pswpElement = document.querySelectorAll('.pswp')[0],
       gallery,
-      options,
-      items;
+      options;
 
-    items = parseThumbnailElements(galleryElement);
+    // Use provided project items or get all items
+    var items = projectItems || parseThumbnailElements(galleryElement);
+    
+    // If no project items provided, filter by clicked project
+    if (!projectItems) {
+      var firstItem = items[index];
+      items = items.filter(function(item) {
+        return item.projectId === firstItem.projectId;
+      });
+      // Adjust index for filtered items
+      index = 0;
+    }
 
-    // define options
     options = {
       showHideOpacity: true,
       galleryUID: galleryElement.getAttribute('data-pswp-uid'),
@@ -174,14 +172,10 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
 
         return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
       },
-      // Prevent switching to other projects' images
-      galleryPIDs: true,
       getDoubleTapZoom: function() {
         return 1;
       },
-      filter: function(item, index) {
-        return item.projectId === items[index].projectId;
-      }
+      index: index
     };
 
     if (fromURL) {
@@ -195,49 +189,21 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
       } else {
         options.index = parseInt(index, 10) - 1;
       }
-    } else {
-      options.index = parseInt(index, 10);
-    }
-
-    if (isNaN(options.index)) {
-      return;
-    }
-
-    if (disableAnimation) {
-      options.showAnimationDuration = 0;
     }
 
     gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
     
-    // Update counter and dots when image changes
+    // Update counter when image changes
     gallery.listen('afterChange', function() {
       var currentIndex = gallery.getCurrentIndex();
-      var currentProject = items[currentIndex].projectId;
-      var projectItems = items.filter(function(item) {
-        return item.projectId === currentProject;
-      });
-      var projectIndex = projectItems.findIndex(function(item) {
-        return item === items[currentIndex];
-      });
-      
-      // Find the current project's gallery element
-      var galleryEl = items[currentIndex].el;
+      var currentItem = items[currentIndex];
+      var galleryEl = currentItem.el;
       
       // Update counter
       var counter = galleryEl.querySelector('.gallery__image-counter');
       if (counter) {
-        counter.textContent = (projectIndex + 1) + '/' + projectItems.length;
+        counter.textContent = (currentIndex + 1) + '/' + items.length;
       }
-      
-      // Update dots
-      var dots = galleryEl.querySelectorAll('.gallery__dot');
-      dots.forEach(function(dot, i) {
-        if (i === projectIndex) {
-          dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
-        }
-      });
     });
 
     gallery.init();
