@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap");
 
 /* Example usage:
    - Use "Orbitron" for big headlines or titles
@@ -30,48 +30,7 @@
   --_animspeed-slow: 0.6s;
   --_animbezier: cubic-bezier(0.23, 0.65, 0.74, 1.09);
 
-  /* ------------------------------------------------*/
-  /* Light Scheme */
-  /* ------------------------------------------------*/
-  --base--light: #F6F7FA;
-  --base-tint--light: #FFFFFF;
-  --base-shade--light: #E2E5EA;
 
-  /* Calmer pastel accent (a soft, friendly blue) */
-  --accent--light: #8BA4F9;
-
-  /* Secondary is a gentle lavender */
-  --secondary--light: #B59CE6;
-
-  /* Semi-transparent version for overlays/effects */
-  --secondary-rgba--light: rgba(181, 156, 230, 0.3);
-
-  --stroke-controls--light: #A8B0C1;
-  --stroke-controls-neutral--light: rgba(0, 0, 0, 0.3);
-  --stroke-elements--light: #D1D5E0;
-
-  --t-bright--light: #22232c;
-  --t-medium--light: #424550;
-  --t-muted--light: #666a79;
-
-  --t-accent--light: #8BA4F9;
-  --t-secondary--light: #B59CE6;
-
-  --t-disabled--light: #717586;
-  --t-placeholder--light: #969BB2;
-
-  --base-opp--light: #111111;
-  --t-opp-bright--light: #ebf0f7;
-  --t-opp-medium--light: #C7C6D3;
-  --t-opp-muted--light: #A1A1AF;
-
-  /* Soft gradients using the accent & secondary */
-  --gradient-one--dark: #8BA4F9;
-  --gradient-two--dark: #B59CE6;
-  --gradient-three--dark: #695E9E;
-  /* Light pinkish or off-white hue for variety */
-
-  /* ------------------------------------------------*/
   /* Dark Scheme */
   /* ------------------------------------------------*/
   --base--dark: #1A1A1F;
@@ -80,7 +39,7 @@
 
   --accent--dark: #8BA4F9;
   --secondary--dark: #B59CE6;
-  --secondary-rgba--dark: rgba(181, 156, 230, 0.2);
+  --secondary-rgba--dark: rgba(181,156,230, 0.2);
 
   --stroke-controls--dark: #4B4B51;
   --stroke-controls-neutral--dark: rgba(255, 255, 255, 0.3);
@@ -103,19 +62,41 @@
 
   --gradient-one--dark: #8BA4F9;
   --gradient-two--dark: #B59CE6;
-  --gradient-three--dark: #695E9E;
-  /* Subtle deeper purple/blue for contrast */
+  --gradient-three--dark: #695E9E; /* Subtle deeper purple/blue for contrast */
+  /* ------------------------------------------------*/
+  /* Light Scheme */
+  /* ------------------------------------------------*/
+   --base--light: #FAFAFB; /* Lighter and cleaner */
+  --base-tint--light: #FFFFFF;
+  --base-shade--light: #EDEEF3; /* Softer than E2E5EA */
 
-  /* Permanent colors (if any) */
-  --per-base: #111111;
-  --per-base-tint: #212121;
-  --per-stroke-controls: rgba(255, 255, 255, 0.4);
-  --t-per-bright-light: #ffffff;
-  --t-per-medium-light: #f2f2f2;
-  --t-per-muted-light: #C7C6D3;
-  --t-per-bright-dark: #27293b;
-  --t-per-medium-dark: #626577;
-  --t-per-muted-dark: #717586;
+  --accent--light: #5C7CFA; /* Calmer, confident indigo */
+  --secondary--light: #A68CD9; /* Elegant soft purple */
+  --secondary-rgba--light: rgba(166, 140, 217, 0.3);
+
+  --stroke-controls--light: #CED4DA;
+  --stroke-controls-neutral--light: rgba(0, 0, 0, 0.1);
+  --stroke-elements--light: #DDE0E6;
+
+  --t-bright--light: #1E1E2F;
+  --t-medium--light: #3E4152;
+  --t-muted--light: #6C707C;
+
+  --t-accent--light: #5C7CFA;
+  --t-secondary--light: #A68CD9;
+
+  --t-disabled--light: #9EA1B2;
+  --t-placeholder--light: #B0B5C3;
+
+  --base-opp--light: #111111;
+  --t-opp-bright--light: #F7F9FD;
+  --t-opp-medium--light: #D5D6DE;
+  --t-opp-muted--light: #A5A7B8;
+
+  --gradient-one--light: #5C7CFA;
+  --gradient-two--light: #A68CD9;
+  --gradient-three--light: #E0C3FC; /* pastel blend */
+
 }
 
 @media only screen and (min-width: 1600px) {
@@ -2758,7 +2739,7 @@ form textarea:required:valid {
 
 @media only screen and (min-width: 1600px) {
   .headline__title {
-    max-width: 900px;
+    max-width: 1000px;
   }
 }
 
