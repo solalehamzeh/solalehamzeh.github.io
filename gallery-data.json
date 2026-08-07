@@ -1,0 +1,160 @@
+{
+  "portfolio": [
+    {
+      "id": "memory-bubble",
+      "title": "Memory Bubble",
+      "captionClass": "",
+      "tags": ["Figma"],
+      "description": "I designed a visually engaging web application focused on guessing numbers or words, offering a dynamic blend of cognitive challenge and social competition. Minimalist UI: Clarity and seamless interaction are prioritized, featuring a vibrant yet restrained purple color palette (#5D58AB) that evokes creativity and energy. Typography: The dynamic Handjet font enhances the app's playful tone while improving readability and immersion in the gameplay.",
+      "mainImage": {
+        "src": "img/Guess1.png",
+        "size": "1580x1124",
+        "alt": "Memory Bubble - A 2D Point-and-Click Game"
+      },
+      "images": [
+        { "src": "img/Guess2.png", "size": "1580x1124" },
+        { "src": "img/Guess3.png", "size": "1580x1124" },
+        { "src": "img/Guess4.png", "size": "1580x1124" }
+      ]
+    },
+    {
+      "id": "procedural-city",
+      "title": "Procedural City & Oasis Asset",
+      "captionClass": "opposite",
+      "tags": ["Figma"],
+      "description": "The website is designed to make customer bookings quick and easy, providing services faster and more conveniently. With the help of quick booking buttons and animations, the site offers an engaging and lively experience for users. The choice to feature the hands of a senior woman with vibrant red nail polish is both intentional and symbolic. Her wrinkled hands reflect the passage of time, conveying a sense of wisdom and authenticity. In contrast, the bright red polish symbolizes energy, elegance, and a celebration of beauty at any age.",
+      "mainImage": {
+        "src": "img/Nail2.png",
+        "size": "1580x1124",
+        "alt": "Procedural City and Oasis Asset - Unity"
+      },
+      "images": [
+        { "src": "img/Nail1.png", "size": "1580x1124" },
+        { "src": "img/Nail3.png", "size": "1580x1124" }
+      ]
+    },
+    {
+      "id": "portfo-despic",
+      "title": "Minimalist One-Page Portfolio",
+      "captionClass": "",
+      "tags": ["Figma"],
+      "description": "Recently, I designed a minimalist one-page portfolio for a client, focusing on simplicity and impact. The goal was to present their skills and work clearly, using clean design and a limited color palette. 🔍 Why Minimalism? - Clarity: Keeps the focus on what matters most. - Efficiency: Quick to load, easy to navigate. - Professional Look: Simple, yet powerful. <a class=\"text-link\" href=\"Files/OldManBubbely.zip\" target=\"_blank\">Download the Game</a>",
+      "mainImage": {
+        "src": "img/PortfoDes1.png",
+        "size": "1580x1124",
+        "alt": "Minimalist One-Page Portfolio"
+      },
+      "images": [
+        { "src": "img/PortfoDes2.png", "size": "1580x1124" },
+        { "src": "img/PortfoDes3.png", "size": "1580x1124" },
+        { "src": "img/PortfoDes4.png", "size": "1580x1124" }
+      ]
+    },
+    {
+      "id": "try-harder",
+      "title": "Try Harder",
+      "captionClass": "",
+      "tags": ["Aseprite", "Unity UI"],
+      "description": "I designed the UI/UX and created all in-game icons using Aseprite, focusing on clarity, consistency, and personality. Every element—from menus to micro-interactions—was crafted to enhance the player experience and reflect the game's quirky, challenging spirit. The goal was to create a visual language that feels both playful and intuitive, supporting the gameplay without ever getting in the way. <a class=\"text-link\" href=\"https://pro-code-designer.itch.io/try-harder-soul-swap\" target=\"_blank\">Download on Itch.io</a>",
+      "mainImage": {
+        "src": "img/Try1.png",
+        "size": "1580x1124",
+        "alt": "Try Harder"
+      },
+      "images": [
+        { "src": "img/Try2.png", "size": "1580x1124" },
+        { "src": "img/Try3.png", "size": "1580x1124" },
+        { "src": "img/Try4.png", "size": "1580x1124" },
+        { "src": "img/Try5.png", "size": "1580x1124" },
+        { "src": "img/Try6.png", "size": "1580x1124" },
+        { "src": "img/Try7.png", "size": "1580x1124" }
+      ]
+    },
+    {
+      "id": "sci-fi-door",
+      "title": "Sci-Fi Door System",
+      "captionClass": "",
+      "tags": ["Figma"],
+      "description": "In my recent project, I focused on interactive design principles to create engaging buttons for a number guessing game. By using a pastel purple color palette and microinteractions, I aimed to enhance the user experience and increase user engagement. These buttons, through a captivating interactive experience, contribute to increased user enjoyment of the game.",
+      "mainImage": {
+        "src": "img/Btn.gif",
+        "size": "800x600",
+        "alt": "Sci-Fi Door System - Customizable Access Logic"
+      },
+      "images": []
+    },
+    {
+      "id": "tower-jump",
+      "title": "Tower Jump - Hyper Casual Game Template",
+      "captionClass": "",
+      "tags": ["Figma"],
+      "description": "This playful button was part of a custom nail appointment site. A tiny polish bottle tilts and \"paints\" the button when clicked—mimicking the nail service being booked. It's a fun, elegant touch that connects the digital interaction to the real-world experience. <a class=\"text-link\" href=\"https://assetstore.unity.com/packages/templates/packs/tower-jump-295773\" target=\"_blank\">Download on Unity Asset Store</a>",
+      "mainImage": {
+        "src": "img/Ink.gif",
+        "size": "800x600",
+        "alt": "Tower Jump - Hyper Casual Game Template"
+      },
+      "images": []
+    },
+    {
+      "id": "water-simulation-1",
+      "title": "Water Simulation with Proximity Experiment",
+      "captionClass": "",
+      "tags": ["Figma"],
+      "description": "A fun experiment in Unity, aiming to replicate Blender's Geometry Nodes for procedural water simulation. Implemented proximity-based interactions to dynamically influence water movement, creating a fluid and adaptive simulation.",
+      "mainImage": {
+        "src": "img/Calender.gif",
+        "size": "800x600",
+        "alt": "Water Simulation with Proximity Experiment"
+      },
+      "images": []
+    },
+    {
+      "id": "water-simulation-2",
+      "title": "Interactive Portfolio Skills",
+      "captionClass": "",
+      "tags": ["Figma"],
+      "description": "In my portfolio, the Skills section is interactive and alive. Clicking on a skill opens a page with detailed insights, making the experience memorable and informative. This blend of motion, learning, and engagement brings the section to life.",
+      "mainImage": {
+        "src": "img/Portfo.gif",
+        "size": "800x600",
+        "alt": "Interactive Portfolio Skills"
+      },
+      "images": []
+    }
+  ],
+  "physical": [
+    {
+      "id": "wallspace-1",
+      "title": "WallSpace – Functional Desk Partition",
+      "captionClass": "",
+      "tags": [],
+      "description": "A lightweight workspace partition designed for focus, adaptability, and clean visual boundaries.",
+      "mainImage": {
+        "src": "img/WallSpace1.1.png",
+        "size": "1670x1337",
+        "alt": "Workspace Divider 1"
+      },
+      "images": [
+        { "src": "img/WallSpace1.2.png", "size": "1670x1336" },
+        { "src": "img/WallSpace1.3.png", "size": "1670x1335" }
+      ]
+    },
+    {
+      "id": "wallspace-2",
+      "title": "WallSpace – Functional Desk Partition",
+      "captionClass": "",
+      "tags": [],
+      "description": "A minimalist desk partition that enhances privacy, supports organization, and fits modern workspaces.",
+      "mainImage": {
+        "src": "img/WallSpace2.1.png",
+        "size": "1670x1337",
+        "alt": "Workspace Divider 2"
+      },
+      "images": [
+        { "src": "img/WallSpace2.2.png", "size": "1782x1337" },
+        { "src": "img/WallSpace2.3.png", "size": "1002x1337" }
+      ]
+    }
+  ]
+}
