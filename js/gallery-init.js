@@ -225,8 +225,3 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
     openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
   }
 };
-
-// Initialize galleries when the DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-  initPhotoSwipeFromDOM('.my-gallery');
-});

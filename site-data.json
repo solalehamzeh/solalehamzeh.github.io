@@ -1,0 +1,100 @@
+{
+  "menu": [
+    { "href": "#portfolio", "caption": "Portfolio", "icon": "ph-bold ph-squares-four" },
+    { "href": "#about", "caption": "About My Work", "icon": "ph-bold ph-user" },
+    { "href": "#resume", "caption": "Resume", "icon": "ph-bold ph-article" },
+    { "href": "#home", "caption": "Who I Am", "icon": "ph-bold ph-house-simple" },
+    { "href": "#contact", "caption": "Contact", "icon": "ph-bold ph-envelope" }
+  ],
+  "avatar": {
+    "image": "img/MyPIC.jpg",
+    "name": "Solale Hamzeh",
+    "buttonText": "Let's Work Together!",
+    "buttonHref": "#contact"
+  },
+  "intro": {
+    "headline": "I'm Solale Hamzeh UI/UX Designer & Junior Product Designer.",
+    "downloadCvText": "Download CV",
+    "downloadCvHref": "Files/Resume_SolaleHamzeh.pdf"
+  },
+  "portfolioSection": {
+    "subtitle": "Portfolio",
+    "title": "Check out my featured projects"
+  },
+  "physicalSection": {
+    "title": "My Physical Products",
+    "description": "Project Concept:<br/>This product was born out of a personal need for privacy and focus within shared working environments. While working on design projects, I often found myself distracted by surrounding activity and a lack of visual boundaries. Existing solutions on the market were either too industrial, visually unappealing, or lacked adaptability. This gap inspired me to design a practical, minimal, and portable partition that would address these limitations.<br/><br/>Design Objective:<br/>To create a lightweight and compact desk partition that enhances visual privacy while supporting customization and organization within personal workspaces.<br/><br/>Features & Functionality:<br/>- Reduces side-view distractions and enhances visual focus<br/>- Can be used as a pinboard for notes, reminders, or creative elements<br/>- Optimized dimensions to suit various desk types<br/>- Lightweight structure with durable material selection<br/>- A clean, minimalist aesthetic that complements modern work environments<br/><br/>Development Process:<br/>The design process began with a detailed needs assessment and evolved through material exploration, hand prototyping, and iterative refinement based on real-world testing. Special attention was given to ergonomics, form, and usability. From concept to production, the entire process was executed independently.<br/><br/>Outcome:<br/>WallSpace is my first handcrafted product and was developed entirely by myself from start to finish. To date, over 15 units have been produced and tested successfully in real workspace scenarios."
+  },
+  "aboutSection": {
+    "subtitle": "About Me",
+    "title": "Turning complex problems into simple design",
+    "text": "As a UI/UX Designer I specialize in crafting user-centered digital products for both B2B and B2C audiences. Since February 2024, I've been actively working on real-world projects, collaborating with developers to transform ideas into clean, intuitive, and effective digital experiences that align with business goals.",
+    "downloadCvText": "Download CV",
+    "downloadCvHref": "Files/Resume_SolaleHamzeh.pdf"
+  },
+  "achievements": [
+    { "number": "1.5+", "descr": "Years of Web Design experience" },
+    { "number": "25+", "descr": "Physical product sold" },
+    { "number": "15+", "descr": "Successfully completed projects" }
+  ],
+  "resumeSection": {
+    "subtitle": "Resume",
+    "title": "and practical experience",
+    "workTitle": "Work experience",
+    "educationTitle": "My education",
+    "toolsTitle": "My favourite tools"
+  },
+  "experiences": [
+    {
+      "title": "UI/UX Designer",
+      "company": "Petaproc",
+      "companyUrl": null,
+      "date": "Feb 2025 - Present",
+      "description": "Currently working as a UI/UX Designer in a team at Petaproc, collaborating with developers on various projects. My role involves designing user interfaces, improving user experiences, and ensuring smooth communication with developers to implement design concepts."
+    },
+    {
+      "title": "Communication Designer",
+      "company": "HMS Innovation",
+      "companyUrl": "https://www.linkedin.com/company/hmsinnovation",
+      "date": "Feb 2024 - Feb 2025",
+      "description": "HMS Innovation is a leading agency specializing in branding and marketing. I was responsible for graphic design, typography editing, and social media management. I also increased engagement by 10% through strategy optimization and managed client relationships to improve user experience."
+    },
+    {
+      "title": "UI/UX Design Intern & Project Assistant",
+      "company": "Hamava Company",
+      "companyUrl": "https://hamava.ir/",
+      "date": "Oct 2024 - Dec 2024",
+      "description": "Collaborated on UI/UX design for project management platforms, produced content for digital channels, and boosted user engagement through strategy optimization and UX improvements."
+    },
+    {
+      "title": "Visual content designer and producer",
+      "company": "Founder and CEO of an online store",
+      "companyUrl": null,
+      "date": "Oct 2024 - Dec 2024",
+      "description": "I was responsible for designing and executing digital marketing strategies, creating creative content, and conducting professional photography to strengthen brand identity. Additionally, I managed packaging and shipping processes, customer engagement, and grew Instagram presence."
+    }
+  ],
+  "education": [
+    { "date": "2025", "title": "BS in Architectural Engineering" },
+    { "date": "2019 - 2022", "title": "Diploma in Mathematics" }
+  ],
+  "tools": [
+    { "name": "Figma", "icon": "img/icons/icon-figma.svg" },
+    { "name": "Aseprite", "icon": "img/icons/icon_Aseprite.svg" },
+    { "name": "Photoshop", "icon": "img/icons/icon-photoshop.svg" },
+    { "name": "Illustrator", "icon": "img/icons/icon-illustrator.svg" },
+    { "name": "Microsoft Excel", "icon": "img/icons/icon-excel.svg" },
+    { "name": "Capcut", "icon": "img/icons/icon-capcut.svg" },
+    { "name": "Inshot", "icon": "img/icons/icon-inshot.svg" }
+  ],
+  "contactSection": {
+    "subtitle": "Contact",
+    "title": "Let's make something awesome together!"
+  },
+  "contacts": [
+    { "label": "Linkedin", "value": "Solale Hamzeh", "href": "https://www.linkedin.com/in/solalehamze/" },
+    { "label": "Phone", "value": "+98 990 585 6559", "href": "tel:+989905856559" },
+    { "label": "Telegram", "value": "@uxsolale", "href": "https://t.me/uxsolale" },
+    { "label": "Email", "value": "Solale606@gmail.com", "href": "mailto:Solale606@gmail.com" }
+  ]
+}

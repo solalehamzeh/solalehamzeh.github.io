@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Site JSON Visual Editor</title>
+    <link rel="stylesheet" href="/public/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>Site JSON Visual Editor</h1>
+        <p>Edit <strong>gallery-data.json</strong> and <strong>site-data.json</strong>, upload images to <em>img/</em>.</p>
+      </header>
+
+      <div class="controls">
+        <button id="load-gallery">Load Gallery JSON</button>
+        <button id="load-site">Load Site JSON</button>
+        <button id="open-raw">Raw Editor</button>
+      </div>
+
+      <main>
+        <section id="visual-gallery" class="editor">
+          <h2>Gallery Editor</h2>
+          <div id="portfolio-list"></div>
+          <div class="form-actions">
+            <button id="add-portfolio">Add Project</button>
+            <button id="save-gallery">Save Gallery JSON</button>
+          </div>
+        </section>
+
+        <section id="visual-site" class="editor hidden">
+          <h2>Site Editor</h2>
+          <div id="site-forms"></div>
+          <div class="form-actions">
+            <button id="save-site">Save Site JSON</button>
+          </div>
+        </section>
+
+        <section id="raw-editor" class="editor hidden">
+          <h2>Raw JSON Editor</h2>
+          <select id="raw-file-select">
+            <option value="gallery-data.json">gallery-data.json</option>
+            <option value="site-data.json">site-data.json</option>
+          </select>
+          <textarea id="raw-text" rows="20"></textarea>
+          <div class="form-actions">
+            <button id="save-raw">Save Raw</button>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <small>Local admin — changes write files in project directory. Backups are made to <code>backups/</code>.</small>
+      </footer>
+    </div>
+
+    <input id="file-uploader" type="file" accept="image/*" style="display:none" />
+
+    <script src="/public/admin.js"></script>
+  </body>
+</html>

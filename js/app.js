@@ -339,6 +339,125 @@ function loadTheme(theme) {
   }
 }
 
+function createGalleryCard(item) {
+  const hasHiddenImages = item.images && item.images.length > 0;
+  const tags = item.tags
+    .map((tag) => `<span class="rounded-tag${item.captionClass ? " " + item.captionClass : ""}">${tag}</span>`)
+    .join("");
+
+  return `
+    <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <div class="project-gallery" data-project-id="${item.id}">
+        <a class="gallery__link" data-image="${item.mainImage.src}" data-size="${item.mainImage.size}" href="${item.mainImage.src}" itemprop="contentUrl">
+          <img alt="${item.mainImage.alt}" class="gallery__image" itemprop="thumbnail" src="${item.mainImage.src}" />
+          <div class="picture" style="background-image: url('${item.mainImage.src}')"></div>
+        </a>
+        ${hasHiddenImages ? `
+        <div class="hidden-gallery-items">
+          ${item.images
+            .map(
+              (image) =>
+                `<a data-image="${image.src}" data-size="${image.size}" href="${image.src}"></a>`
+            )
+            .join("")}
+        </div>
+        ` : ""}
+      </div>
+      <figcaption class="gallery__descr ${item.captionClass || ""}" itemprop="caption description">
+        <h5>${item.title}</h5>
+        <div class="card__tags d-flex flex-wrap">${tags}</div>
+        <p class="small">${item.description}</p>
+      </figcaption>
+    </figure>`;
+}
+
+function renderGalleryData(data, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  container.innerHTML = data
+    .map((item) => createGalleryCard(item))
+    .join("");
+}
+
+function renderTextData(siteData) {
+  const renderMenu = siteData.menu
+    .map(
+      (item) =>
+        `<li class="menu__item"><a class="menu__link btn" href="${item.href}"><span class="menu__caption">${item.caption}</span><i class="${item.icon}"></i></a></li>`
+    )
+    .join("");
+  document.getElementById("menu-list").innerHTML = renderMenu;
+
+  document.getElementById("avatar-image").src = siteData.avatar.image;
+  document.getElementById("avatar-image").alt = `${siteData.avatar.name} avatar`;
+  document.getElementById("avatar-name").textContent = siteData.avatar.name;
+  document.getElementById("avatar-button").href = siteData.avatar.buttonHref;
+  document.getElementById("avatar-button-text").textContent = siteData.avatar.buttonText;
+
+  document.getElementById("headline-title").textContent = siteData.intro.headline;
+  document.getElementById("download-cv-btn").href = siteData.intro.downloadCvHref;
+  document.getElementById("download-cv-text").textContent = siteData.intro.downloadCvText;
+
+  document.getElementById("portfolio-subtitle").textContent = siteData.portfolioSection.subtitle;
+  document.getElementById("portfolio-title").textContent = siteData.portfolioSection.title;
+
+  document.getElementById("physical-products-title").textContent = siteData.physicalSection.title;
+  document.getElementById("physical-products-description").innerHTML = siteData.physicalSection.description;
+
+  document.getElementById("about-subtitle").textContent = siteData.aboutSection.subtitle;
+  document.getElementById("about-title").textContent = siteData.aboutSection.title;
+  document.getElementById("about-text").textContent = siteData.aboutSection.text;
+  document.getElementById("download-cv-button").href = siteData.aboutSection.downloadCvHref;
+  document.getElementById("download-cv-button-text").textContent = siteData.aboutSection.downloadCvText;
+
+  document.getElementById("resume-subtitle").textContent = siteData.resumeSection.subtitle;
+  document.getElementById("resume-title").textContent = siteData.resumeSection.title;
+  document.getElementById("work-title").textContent = siteData.resumeSection.workTitle;
+  document.getElementById("education-title").textContent = siteData.resumeSection.educationTitle;
+  document.getElementById("tools-title").textContent = siteData.resumeSection.toolsTitle;
+  document.getElementById("contact-subtitle").textContent = siteData.contactSection.subtitle;
+  document.getElementById("contact-title").textContent = siteData.contactSection.title;
+
+  const achievementsHtml = siteData.achievements
+    .map(
+      (achievement) =>
+        `<div class="achievements__item d-flex flex-column grid-item animate-card-3"><div class="achievements__card"><p class="achievements__number">${achievement.number}</p><p class="achievements__descr">${achievement.descr}</p></div></div>`
+    )
+    .join("");
+  document.getElementById("achievements-list").innerHTML = achievementsHtml;
+
+  const toolsHtml = siteData.tools
+    .map(
+      (tool) =>
+        `<div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img alt="${tool.name} Icon" class="tools-cards__icon animate-in-up" src="${tool.icon}" /><h6 class="tools-cards__caption animate-in-up">${tool.name}</h6></div></div>`
+    )
+    .join("");
+  document.getElementById("tools-cards").innerHTML = toolsHtml;
+
+  const contactHtml = siteData.contacts
+    .map(
+      (contact) =>
+        `<div class="col-12 col-md-3 contact-lines__data"><p class="contact-lines__title animate-in-up">${contact.label}</p><p class="contact-lines__text animate-in-up"><a class="text-link-bold" href="${contact.href}" target="_blank">${contact.value}</a></p></div>`
+    )
+    .join("");
+  document.getElementById("contact-list").innerHTML = contactHtml;
+}
+
+function loadSiteData() {
+  return Promise.all([
+    fetch("site-data.json").then((response) => response.json()),
+    fetch("gallery-data.json").then((response) => response.json()),
+  ]).then(([siteData, galleryData]) => {
+    renderTextData(siteData);
+    renderGalleryData(galleryData.portfolio, "portfolio-gallery");
+    renderGalleryData(galleryData.physical, "physical-gallery");
+
+    if (typeof initPhotoSwipeFromDOM === "function") {
+      initPhotoSwipeFromDOM('.my-gallery');
+    }
+  });
+}
+
 themeBtn.addEventListener("click", () => {
   let theme = getCurrentTheme();
   if (theme === "dark") {
@@ -352,6 +471,9 @@ themeBtn.addEventListener("click", () => {
 
 window.addEventListener("DOMContentLoaded", () => {
   loadTheme(getCurrentTheme());
+  loadSiteData().catch((error) => {
+    console.error("Failed to load site data:", error);
+  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
