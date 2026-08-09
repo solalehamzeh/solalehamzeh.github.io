@@ -28,7 +28,7 @@
   ],
   "avatar": {
     "image": "img/MyPIC.jpg",
-    "name": "Solale Hamzeh",
+    "name": "Solale Hamz",
     "buttonText": "Let's Work Together!",
     "buttonHref": "#contact"
   },
@@ -68,7 +68,7 @@
   ],
   "resumeSection": {
     "subtitle": "Resume",
-    "title": "Education and practical experience",
+    "title": "and practical experience",
     "workTitle": "Work experience",
     "educationTitle": "My education",
     "toolsTitle": "My favourite tools"

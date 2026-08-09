@@ -27,7 +27,7 @@
     }
   ],
   "avatar": {
-    "image": "img/MyPIC.jpg",
+    "image": "img/1786146711630-494299043.jpg",
     "name": "Solale Hamzeh",
     "buttonText": "Let's Work Together!",
     "buttonHref": "#contact"
@@ -68,7 +68,7 @@
   ],
   "resumeSection": {
     "subtitle": "Resume",
-    "title": "Education and practical experience",
+    "title": "and practical experience",
     "workTitle": "Work experience",
     "educationTitle": "My education",
     "toolsTitle": "My favourite tools"

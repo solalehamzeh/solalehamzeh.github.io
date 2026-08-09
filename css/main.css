@@ -4041,7 +4041,7 @@ form textarea:required:valid {
 }
 
 .pswp__bg {
-  background: var(--per-base-tint);
+  background-color: var(--base-tint, rgba(0, 0, 0, 0.85));
 }
 
 .pswp__top-bar,

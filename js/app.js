@@ -434,6 +434,46 @@ function renderTextData(siteData) {
     .join("");
   document.getElementById("tools-cards").innerHTML = toolsHtml;
 
+  const experiencesHtml = siteData.experiences
+    .map(
+      (experience) => `
+        <div class="row g-0 resume-lines__item animate-in-up">
+          <div class="col-12 col-md-2">
+            <span class="resume-lines__date animate-in-up">${experience.date}</span>
+          </div>
+          <div class="col-12 col-md-10">
+            <h5 class="resume-lines__title animate-in-up">${experience.title}</h5>
+            <p class="resume-lines__source animate-in-up">
+              ${
+                experience.companyUrl
+                  ? `<a class="text-link-bold" href="${experience.companyUrl}" target="_blank" rel="noopener">${experience.company}</a>`
+                  : experience.company
+              }
+            </p>
+            ${experience.description ? `<br /><p class="small resume-lines__descr animate-in-up">${experience.description}</p>` : ""}
+          </div>
+        </div>
+      `
+    )
+    .join("");
+  document.getElementById("resume-experiences").innerHTML = experiencesHtml;
+
+  const educationHtml = siteData.education
+    .map(
+      (educationItem) => `
+        <div class="row g-0 resume-lines__item animate-in-up">
+          <div class="col-12 col-md-2">
+            <span class="resume-lines__date animate-in-up">${educationItem.date}</span>
+          </div>
+          <div class="col-12 col-md-10">
+            <h5 class="resume-lines__title animate-in-up">${educationItem.title}</h5>
+          </div>
+        </div>
+      `
+    )
+    .join("");
+  document.getElementById("resume-education").innerHTML = educationHtml;
+
   const contactHtml = siteData.contacts
     .map(
       (contact) =>
