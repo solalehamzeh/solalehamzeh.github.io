@@ -28,7 +28,7 @@
   ],
   "avatar": {
     "image": "img/MyPIC.jpg",
-    "name": "Solale Hamzeh",
+    "name": "Solale",
     "buttonText": "Let's Work Together!",
     "buttonHref": "#contact"
   },
@@ -54,7 +54,7 @@
   },
   "achievements": [
     {
-      "number": "1.5+",
+      "number": "2+",
       "descr": "Years of Web Design experience"
     },
     {
@@ -148,11 +148,6 @@
     "title": "Let's make something awesome together!"
   },
   "contacts": [
-    {
-      "label": "Linkedin",
-      "value": "Solale Hamzeh",
-      "href": "https://www.linkedin.com/in/solalehamze/"
-    },
     {
       "label": "Phone",
       "value": "+98 990 585 6559",
