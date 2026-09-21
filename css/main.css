@@ -2917,6 +2917,7 @@ form textarea:required:valid {
   }
 }
 
+
 /* ------------------------------------------------*/
 /* Sections Inner End */
 /* ------------------------------------------------*/
@@ -4373,9 +4374,6 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* Features Resume Start */
 /* ------------------------------------------------*/
-.resume {
-  padding-top: 0;
-}
 
 .contact {
   padding-top: 0rem;
@@ -5030,3 +5028,4 @@ form textarea:required:valid {
 .mr-2 {
   margin-right: 2rem;
 }
+
